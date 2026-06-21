@@ -1,0 +1,30 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1",
+  "name": "PartKit Importer & Syncer",
+  "description": "Atomically import, preview, and sync KiCad component libraries (symbols, footprints, 3D models) with real-time pin-to-pad checking.",
+  "description_full": "PartKit is a utility designed to solve the workflow of importing KiCad components downloaded from Ultra Librarian, SnapEDA, SamacSys, and Octopart. It launches a local web application featuring: \\n- Real-time symbol pin to footprint pad hover mapping.\\n- Real-time 3D model visual offset alignment sliders.\\n- Strict validation engine ensuring pin-pad mapping matches and duplicate items are checked.\\n- Local component indexing database browser showing checksums, manufacturers, and datasheets.\\n- Zero KiCad library table manipulation required.",
+  "version": "1.0.0",
+  "kicad_version": "10.0",
+  "kicad_version_max": "11.0",
+  "status": "stable",
+  "author": {
+    "name": "PartKit Dev Team",
+    "contact": "https://github.com/mvrck/PartKit"
+  },
+  "license": "MIT",
+  "tags": [
+    "utility",
+    "libraries",
+    "importer",
+    "3d",
+    "cross-probing"
+  ],
+  "resources": {
+    "homepage": "https://github.com/mvrck/PartKit"
+  },
+  "platforms": [
+    "macos",
+    "windows",
+    "linux"
+  ]
+}

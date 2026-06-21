@@ -1,0 +1,36 @@
+[
+  {
+    "name": "CB_11_1_ADI",
+    "manufacturer": "Unknown",
+    "mpn": "CB_11_1_ADI",
+    "package": "CB_11_1_ADI",
+    "source": "Ultra Librarian",
+    "version": "1.0.0",
+    "importDate": "2026-06-21T17:24:05.232Z",
+    "checksum": "243fefef84939bbf86418517cfe955a96d455b81badec6dad4882abc504d830e",
+    "datasheet": "",
+    "aliases": [],
+    "symbolLib": "PartKit",
+    "footprintLib": "PartKit",
+    "symbolFile": "/Users/mvrck/Developer/Projects/PartKit/libraries/PartKit.kicad_sym",
+    "footprintFile": "/Users/mvrck/Developer/Projects/PartKit/libraries/PartKit.pretty/CB_11_1_ADI.kicad_mod",
+    "modelFile": ""
+  },
+  {
+    "name": "CB_8_1_ADI",
+    "manufacturer": "Unknown",
+    "mpn": "CB_8_1_ADI",
+    "package": "CB_8_1_ADI",
+    "source": "Ultra Librarian",
+    "version": "1.0.0",
+    "importDate": "2026-06-21T17:29:30.918Z",
+    "checksum": "4e41f5e0f8a22f3857a925fa430694c269034aa211d3f4d55dcebea9bd78ed9a",
+    "datasheet": "",
+    "aliases": [],
+    "symbolLib": "PartKit",
+    "footprintLib": "PartKit",
+    "symbolFile": "/Users/mvrck/Developer/Projects/PartKit/libraries/PartKit.kicad_sym",
+    "footprintFile": "/Users/mvrck/Developer/Projects/PartKit/libraries/PartKit.pretty/CB_8_1_ADI.kicad_mod",
+    "modelFile": ""
+  }
+]
