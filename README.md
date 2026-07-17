@@ -1,44 +1,41 @@
 # PartKit
 
-PartKit is a native, zero-dependency external action plugin for **KiCad** designed to streamline component importing. Written in 100% pure Python and utilizing KiCad's bundled wxPython framework, it eliminates complex dependencies like React, Node, WebViews, or local HTTP servers.
+An external action plugin for KiCad to import component packages (ZIPs, symbols, footprints, and 3D models) into your KiCad libraries.
 
-## Key Features
+## How it works
 
-*   **Sleek Single-Column GUI**: A refined desktop interface inspired by Teenage Engineering aesthetics.
-*   **Unified Drag & Drop**: Drag a ZIP package (e.g. from Ultra Librarian, SnapEDA) or individual `.kicad_sym`, `.kicad_mod`, or `.step`/`.wrl` files anywhere on the dialog to auto-parse metadata and extract assets.
-*   **Interactive Footprint Viewer**: Renders PCB copper pads dynamically with support for mouse click-and-drag panning and mouse wheel zooming.
-*   **Bidirectional Cross-Probing**: Hovering over a schematic pin in the symbol preview highlights the corresponding footprint pad in green, and vice versa, ensuring proper pad mapping before import.
-*   **Dynamic Library Discovery**: Auto-detects and lists all your active symbol and footprint target libraries directly from your local KiCad global configuration tables (`sym-lib-table` and `fp-lib-table`).
-*   **Atomic Transactions**: Copies files, renames models, updates S-expression links, and registers libraries in database indexes atomically. If any step fails, changes are automatically rolled back.
+1. **Drop files**: Drag and drop a ZIP archive (containing footprint, symbol, and 3D files) or individual `.kicad_sym`, `.kicad_mod`, or `.step`/`.wrl` files anywhere on the window.
+2. **Visual check**: Previews the schematic symbol and PCB footprint side-by-side. Hovering over a symbol pin highlights the matching pad on the footprint (and vice versa) to confirm mapping.
+3. **Import**: Copies and links the 3D model to the footprint, appends the symbol and footprint to your target libraries, and registers them in your `sym-lib-table` / `fp-lib-table` configurations.
 
-## Repository Structure
+## Repository files
 
-*   `__init__.py`: KiCad plugin registration entrypoint.
-*   `partkit_action.py`: Dialog interface logic, layout controls, interactive graphics panels (`wx.PaintDC`), and mouse events.
-*   `sexpr.py`: Custom zero-dependency KiCad S-expression parser/serializer, validation checkers, and library registrars.
-*   `icon.png`: Toolbar action icon displayed in KiCad.
+* `__init__.py`: KiCad plugin registration hook.
+* `partkit_action.py`: GUI window panel, custom canvas drawing (`wx.PaintDC`), mouse hover/pan/zoom events.
+* `sexpr.py`: Custom KiCad S-expression parser/serializer and table registry logic.
+* `icon.png`: KiCad toolbar icon.
 
 ## Installation
 
 ### macOS
-Symlink or copy the `PartKit` folder into your KiCad scripting plugins directory:
+Symlink the `PartKit` directory to your KiCad plugins path:
 ```bash
 ln -s "/path/to/PartKit" ~/Library/Preferences/kicad/10.0/scripting/plugins/PartKit
 ```
 
 ### Windows
-Copy the `PartKit` folder into your KiCad user plugins directory:
+Copy the `PartKit` directory into:
 `%APPDATA%\kicad\10.0\scripting\plugins\`
 
 ### Linux
-Copy the `PartKit` folder into:
+Copy the `PartKit` directory into:
 `~/.config/kicad/10.0/scripting/plugins/`
 
 ---
 
-## Running Standalone
+## Standalone Execution
 
-You can test and run the PartKit GUI outside KiCad using KiCad's bundled Python interpreter (which includes the required `wxPython` environment):
+You can run and test the GUI outside KiCad using KiCad's bundled Python interpreter (which has the required `wx` module):
 
 **macOS:**
 ```bash
