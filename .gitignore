@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PartKit local workspace caches & configuration files
+extracted/
+config.json
+libraries/database.json
+
+# Local virtual environment
+venv/
+.env
+
+# Reference designs
+Reference/
+
+# Node/React remnants (if any)
+node_modules/
+dist/
+package-lock.json
+
